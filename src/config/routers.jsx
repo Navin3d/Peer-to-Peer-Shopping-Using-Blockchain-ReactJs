@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Footer from "../component/Footer";
 
 import Navabar from "../component/Navbar";
 
@@ -11,6 +12,7 @@ const AppRouter = () => (
         <Routes>
             <Route path="/" element={<HomePage />}/>
         </Routes>
+        <Footer />
     </BrowserRouter>
 );
 
