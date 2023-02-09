@@ -76,7 +76,7 @@ export default function Footer() {
     <Paper className={root}>
       <Box className={root_left}>
         <Box>
-          <FcPodiumWithAudience size={35} /> <span>Theomeals</span>
+          <FcPodiumWithAudience size={35} /> <span>P2P Shopping</span>
         </Box>
         <Typography width={{ 'sm': '100%', 'md': '70%' }}>
           Thank you for trusting us with your meals. We do hope you enjoy our

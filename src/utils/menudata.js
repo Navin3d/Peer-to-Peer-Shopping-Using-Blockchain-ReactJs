@@ -1,17 +1,17 @@
 export default [
   {
     id: "_id",
-    title: 'Rice chicken and spicies',
-    stock: 'spicy chicken red BBQ',
-    soldBy: '105 calories',
+    title: 'Mango',
+    stock: '1',
+    soldBy: '105',
     price: '#14,000',
     imageUrl: './menuimage1.png',
   },
   {
     id: "_id",
-    title: 'Rice chicken and spicies',
-    stock: 'spicy chicken red BBQ',
-    soldBy: '105 calories',
+    title: 'Pumkim',
+    stock: '1',
+    soldBy: '105',
     price: '#14,000',
     imageUrl: './menuimage1.png',
   },

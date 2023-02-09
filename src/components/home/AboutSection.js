@@ -84,7 +84,7 @@ export default function AboutSection() {
           About
         </Typography>
         <Typography className={leaderBoard_left_h1} variant="h2" component="h1">
-          We are the best quality <br /> restaurant
+          We are the best quality <br /> vegetable
         </Typography>
         <Typography className={about_descriptions} component="p">
           Restaurant in Nigeria sourcing our ingredient locally, to celebrate

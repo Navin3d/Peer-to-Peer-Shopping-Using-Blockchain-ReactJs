@@ -93,9 +93,9 @@ export default function WhyChooseUs() {
       <div className={icon_boxes}>
         <Iconbox
           Icon={<EcoIcon className={icon_box_icon} />}
-          title="Fresh food"
+          title="Fresh vegetable"
           details1="We server the best and fresh"
-          details2="quality food"
+          details2="quality vegetable"
         />
         <Iconbox
           Icon={<BusinessIcon className={icon_box_icon} />}

@@ -141,7 +141,7 @@ export default function LeaderBoard() {
           <div className={quickTip_container}>
             <QuickTip
               Icon={<LocalMallIcon />}
-              quicktip_details1="select your favourite food"
+              quicktip_details1="select your favourite vegetable"
               quicktip_details2="and order!"
             />
             <QuickTip
@@ -151,7 +151,7 @@ export default function LeaderBoard() {
             />
             <QuickTip
               Icon={<LocalShippingIcon />}
-              quicktip_details1="Get your food within"
+              quicktip_details1="Get your vegetable within"
               quicktip_details2="01-02 hours"
             />
           </div>

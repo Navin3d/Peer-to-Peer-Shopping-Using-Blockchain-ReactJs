@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import Homemenuitem from './Homemenuitem';
 import menudata from '../../utils/menudata';
 import { getAllProducts } from "../../services/product-service";
+import log from '../../services/logging-service';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -61,36 +62,20 @@ const useStyles = makeStyles((theme) => ({
 const INITIAL_PRODUCTS = [
   {
     id: "_id",
-    title: 'Rice chicken and spicies',
-    stock: 'spicy chicken red BBQ',
-    soldBy: '105 calories',
+    title: 'Mango',
+    stock: '1',
+    soldBy: '105',
     price: '#14,000',
     imageUrl: './menuimage1.png',
   },
   {
     id: "_id",
-    title: 'Rice chicken and spicies',
-    stock: 'spicy chicken red BBQ',
-    soldBy: '105 calories',
+    title: 'Pumkim',
+    stock: '1',
+    soldBy: '105',
     price: '#14,000',
     imageUrl: './menuimage1.png',
-  },
-  {
-    id: "_id",
-    title: 'Rice chicken and spicies',
-    stock: 'spicy chicken red BBQ',
-    soldBy: '105 calories',
-    price: '#14,000',
-    imageUrl: './menuimage1.png',
-  },
-  {
-    id: "_id",
-    title: 'Rice chicken and spicies',
-    stock: 'spicy chicken red BBQ',
-    soldBy: '105 calories',
-    price: '#14,000',
-    imageUrl: './menuimage1.png',
-  },
+  }
 ];
 
 export default function Homemenu() {
@@ -104,9 +89,13 @@ export default function Homemenu() {
   } = useStyles();
   const [products, setProducts] = useState(menudata);
 
-  const initializeProducts = async () => {
-    const products = await getAllProducts();
-    setProducts(products);
+  const initializeProducts = () => {
+    getAllProducts().then((data) => {
+      setProducts(data);
+    }).catch((e) => {
+      setProducts(INITIAL_PRODUCTS);
+      log.error("Unable To Connect To Blockchain...");
+    });
   };
 
   useEffect(() => {

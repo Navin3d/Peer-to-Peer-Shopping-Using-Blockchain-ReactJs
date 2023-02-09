@@ -12,7 +12,9 @@ import {
 } from '@material-ui/core';
 
 import MenuIcon from '@material-ui/icons/Menu';
+import ChangeHistory from '@material-ui/icons/ChangeHistory';
 import { Link as RouterLink, useLocation } from 'react-router-dom';
+import { login } from '../../services/blockchsin-service.js';
 
 import Notification from '../layout/MainLayout/Header/NotificationSection.js';
 import Profile from '../layout/MainLayout/Header/ProfileSection.js';
@@ -138,6 +140,11 @@ export default function Navbar() {
             <Profile />
             <CartSection />
             {/* {auth.authenticated && <Notification />} */}
+            <Button
+              onClick={() => { login() }}
+              variant="contained" endIcon={<ChangeHistory />}>
+              Blockchain
+            </Button>
           </div>
         </div>
       </Toolbar>
