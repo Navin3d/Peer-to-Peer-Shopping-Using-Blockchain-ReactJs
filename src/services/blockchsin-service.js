@@ -1,8 +1,7 @@
 import Web3 from "web3";
-window.ethereum.request({ method: "eth_requestAccounts" });
+
 
 const CONTRACT_ADDRESS = "0xC23D9886Dc215392463aBEd1022BBa7F40938cBb";
-
 const ABI = [
 	{
 		"inputs": [],
@@ -304,6 +303,9 @@ const ABI = [
 	}
 ];
 
+export const login = () => {
+	window.ethereum.request({ method: "eth_requestAccounts" });
+}
 export const web3 = new Web3(window.ethereum);
 export const getAccount = async () => { 
 	const accounts = await web3.eth.getAccounts();

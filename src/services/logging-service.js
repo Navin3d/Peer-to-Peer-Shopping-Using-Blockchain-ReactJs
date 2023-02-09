@@ -6,13 +6,13 @@ class Logging {
         console.table(data);
     }
     info(info) {
-        console.log(`[INFO]  ====> ${info} ${this.current_time} <====`);
+        console.log(`[${this.current_time}] [INFO]  ====> ${JSON.stringify(info)}`);
     }
     warn(warn) {
-        console.log(`[WARN]  ====> ${warn} ${this.current_time} <====`);
+        console.log(`[${this.current_time}] [WARN]  ====> ${JSON.stringify(warn)}`);
     }
     error(error) {
-        console.log(`[ERROR] ====> ${error} ${this.current_time} <====`);
+        console.log(`[${this.current_time}] [ERROR] ====> ${JSON.stringify(error)}`);
     }
 }
 const log = new Logging();

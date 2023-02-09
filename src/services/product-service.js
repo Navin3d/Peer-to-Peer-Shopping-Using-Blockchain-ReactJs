@@ -73,8 +73,12 @@ export const deleteAProduct = async (productId) => {
 
 export const buyAProduct = async (productId, price) => {
     let account = await getAccount();
+    const etherValue = web3.utils.fromWei(price, 'ether');
+    const wei = web3.utils.toWei(etherValue, 'ether');
+    log.info(etherValue + " - " + wei);
     await frmsContract.methods.buyAProduct(productId).send({
         from: account,
-        value: web3.utils.toWei(`${price}`, "ether")
+        gas: '210000',
+        value: web3.utils.toHex(wei)
     });
 }
